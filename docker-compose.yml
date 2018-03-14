@@ -10,7 +10,7 @@ services:
       MYSQL_DATABASE: modx
     ports:
       - 33060:3306
-    command: mysqld --sql-mode=NO_ENGINE_SUBSTITUTION
+    command: mysqld --sql-mode=NO_ENGINE_SUBSTITUTION --character-set-server=utf8 --collation-server=utf8_general_ci
   nginx:
     image: alroniks/nginx:latest
     restart: always
@@ -19,8 +19,10 @@ services:
     volumes_from:
       - php
   php:
-    build: ./multikey-modx-template/
+    build: ./modx/
     restart: always
+    ports:
+      - 8081:8081
     volumes:
       - ./src:/var/www/html/public
     depends_on:
