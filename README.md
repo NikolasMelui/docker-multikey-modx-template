@@ -1,20 +1,17 @@
 Docker Multikey Modx Template
 ======
-#####[Russian version][russian-docs]
+##### [Russian][russian-docs]
 Docker Multikey Modx Template, powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [Multikey Studio][multikey-studio], is a powerfull orchestration platform of docker and docker-compose files includes nginx, mysql, php, gitify and modx-multikey-template.
 
 # Important!
-
 You need to install [Docker][docker] and [Docker-compose][docker-compose] first.
 
 You can think this is useless template with old technologies and MODX is bad and dead. Ok.
-
 > Go and fu** yourself. J. Stat.
 
 ## Installation
 
 Clone this repo to your local mashine and install all dependencies:
-opt: you can rename direct folder or clone repo to ./ folder you need.
 ```
 $ git clone https://github.com/NikolasMelui/docker-multikey-modx-template.git
 $ cd docker-multikey-modx-template
