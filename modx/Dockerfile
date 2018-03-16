@@ -1,6 +1,6 @@
 FROM php:7.0-fpm
 
-RUN apt-get update && apt-get install -y curl zip unzip git vim
+RUN apt-get update && apt-get install -y curl zip unzip git vim xclip
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && apt-get install -y nodejs build-essential
 
