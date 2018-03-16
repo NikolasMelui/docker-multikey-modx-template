@@ -1,6 +1,7 @@
 Docker Multikey Modx Template
 ======
-Docker Multikey Modx Template, powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for Multikey Studio, is a powerfull orchestration platform of docker and docker-compose files includes nginx, mysql, php, gitify and modx-multikey-template.
+[Russian version][russian-docs]
+Docker Multikey Modx Template, powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [Multikey Studio][multikey-studio], is a powerfull orchestration platform of docker and docker-compose files includes nginx, mysql, php, gitify and modx-multikey-template.
 
 # Important!
 
@@ -133,3 +134,5 @@ SOFTWARE.
    [mysql]: <https://www.mysql.com/downloads/>
    [nodejs]: <http://nodejs.org>
    [multikey-modx-template]: <https://github.com/NikolasMelui/multikey-modx-template>
+   [russian-docs]: <https://github.com/NikolasMelui/docker-multikey-modx-template/README-ru.md>
+   [multikey-studio]: <https://github.com/MultikeyStudio>
