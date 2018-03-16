@@ -134,5 +134,5 @@ SOFTWARE.
    [mysql]: <https://www.mysql.com/downloads/>
    [nodejs]: <http://nodejs.org>
    [multikey-modx-template]: <https://github.com/NikolasMelui/multikey-modx-template>
-   [russian-docs]: <https://github.com/NikolasMelui/docker-multikey-modx-template/README-ru.md>
+   [russian-docs]: <https://github.com/NikolasMelui/docker-multikey-modx-template/blob/master/README-ru.md>
    [multikey-studio]: <https://github.com/MultikeyStudio>
