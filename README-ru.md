@@ -1,38 +1,33 @@
 Docker Multikey Modx Template
 ======
 ##### [English][english-docs]
-Docker Multikey Modx Template, powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [Multikey Studio][multikey-studio], is a powerfull orchestration platform of docker and docker-compose files includes nginx, mysql, php, gitify and modx-multikey-template.
+Docker Multikey Modx Template, разработан [NikolasMelui][nikolasmelui] и [RinatDav][rinatdav] для [Multikey Studio][multikey-studio], это полноценная мощная оркестрация, представляющая собой платформу из docker и docker-compose файлов, включающая в себя nginx, mysql, php, gitify и modx-multikey-template.
 
-# Important!
-You need to install [Docker][docker] and [Docker-compose][docker-compose] first.
+# Важно!
+Для корректной работы у вас на рабочей машине должны быть установлены [Docker][docker] и [Docker-compose][docker-compose].
 
-You can think this is useless template with old technologies and MODX is bad and dead. Ok.
+Вы можете думать, что это бесполезный шаблон, использующий старые технологии, что MODX - мёртв и стар. Окда.
 > Go and fu** yourself. J. Stat.
 
-## Installation
+## Установка
 
-Clone this repo to your local mashine and install all dependencies:
+Склонируйте себе этот репозиторий на рабочую машину и установите все зависимости:
 ```
 $ git clone https://github.com/NikolasMelui/docker-multikey-modx-template.git
 $ cd docker-multikey-modx-template
 $ docker-compose up -d
 ```
-Once everything is installed, go to the project files container (named *_php_1) interactive mode with bash:
+Когда всё установилось, перейдите в контейнер с проектом (именуемый *_php_1) в interactive режиме с командой bash:
 ```
 $ docker exec -it *_php_1 bash
 ```
-You have two important folders on second-level-up - __Gitify__ and __Template__.
-Use this commands to copy multikey-modx-template and install MODX Revo:
+На 2 уровня выше текущей директории у вас есть 2 важные папки - __Gitify__ и __Template__.
+Используйте следующие команды для копирования multikey-modx-template и установки MODX Revo:
 ```
 $ cp ../../Template/* ./
 $ cp ../../Gitify/Gitify modx:install
 ```
-Use this commands to copy multikey-modx-template and install MODX Revo:
-```
-$ cp ../../Template/* ./
-$ cp ../../Gitify/Gitify modx:install
-```
-Gitify will ask you for details to install (all details is in __docker-compose.yml__ file):
+Gitify будет спрашивать у вас информацию для установки (вся информация содержится в файле __docker-compose.yml__):
 * Database Host [localhost]: __db__
 * Database Name [dockermultikeymodxtemplate]: __modx__
 * Database User [root]: __root__
@@ -45,41 +40,40 @@ Gitify will ask you for details to install (all details is in __docker-compose.y
 * Manager User Password [generated]: __password__
 * Manager Email:
 
-Install all packages:
+Установите все пакеты (плагины MODX Revo):
 ```
 $ ../../Gitify/Gitify package:install --all
 ```
-Now build the project installation:
+Теперь "соберите" проект (сериализуйте данные из статических файлов в указанную выше базу данных):
 ```
 $ ../../Gitify/Gitify build --force
 ```
-Use this sh script to add necessary rules for files and folders:
+И с помощью sh скрипта присвойте необходимые для корректной работы MODX Revo права и привелегии для файлов и папок:
 ```
 $ sh rules.sh
 ```
-And now you have a complete template.
+На этом всё, ваш шаблон собран и проект готов.
 
-### Quick Start
-
-Use npm to install frontend dependencies and run browserSync and watchers to realy 'reactive' development:
+### Быстрый старт
+Используйте npm чтобы установить все frontend зависимости и запустить browserSync и "вотчеры" для настоящей "реактивной" разработки:
 ```
 $ npm i
 $ npm run dev
 ```
 
-... and this command if needed to create a minified frontend files:
+... и если вам нужно собрать минифицированные файлы - вот необходимый скрипт:
 ```
 $ npm run prod
 ```
-##### Know more about pure [multikey-modx-template][multikey-modx-template].
+##### Узнать больше про проект [multikey-modx-template][multikey-modx-template].
 
-## Development
+## Разработка
 
-Want to contribute? Great!
-This is an opensource project. All contributions are welcome. Make a fork and go on!
+Хотите стать разработчиком этого проекта? Супер!
+Это opensource проект. Все контрибуции приветствуются. Форкайте проект себе и вперёд!
 __
 
-| Todos | Status |
+| Что сделать | Статус |
 | ------ | ------ |
 | es6 | - |
 | Patterns | - |
@@ -91,7 +85,7 @@ __
 | Docker | https://github.com/NikolasMelui/docker-multikey-modx-template |
 | Kubernates | - |
 ___
-License
+Лицензия
 ----
 MIT License
 
@@ -115,7 +109,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-**From developers 2 developers.**
+**От разработчиков к разработчикам.**
 [NikolasMelui][nikolasmelui]
 [RinatDav][rinatdav]
 
