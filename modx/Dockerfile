@@ -10,6 +10,8 @@ RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-di
 
 RUN cd /var/www && git clone https://github.com/modmore/Gitify.git && cd Gitify && composer install
 
+RUN cd /var/www && git clone https://github.com/NikolasMelui/multikey-modx-template.git Template
+
 RUN { echo 'date.timezone=Europe/Moscow'; } > /usr/local/etc/php/conf.d/datetime.ini
 
 WORKDIR /var/www/html/public
