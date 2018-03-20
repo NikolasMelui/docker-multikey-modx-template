@@ -30,7 +30,7 @@ $ cp ../../Gitify/Gitify modx:install
 Use this commands to copy multikey-modx-template and install MODX Revo:
 ```
 $ cp ../../Template/* ./
-$ cp ../../Gitify/Gitify modx:install
+$ ../../Gitify/Gitify modx:install
 ```
 Gitify will ask you for details to install (all details is in __docker-compose.yml__ file):
 * Database Host [localhost]: __db__
