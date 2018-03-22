@@ -21,10 +21,9 @@ $ docker-compose up -d
 ```
 $ docker exec -it *_php_1 bash
 ```
-На 2 уровня выше текущей директории у вас есть 2 важные папки - __Gitify__ и __Template__.
-Используйте следующие команды для копирования multikey-modx-template и установки MODX Revo:
+Используйте следующие команды, чтобы склонировать репозиторий с multikey-modx-template и установить MODX Revo:
 ```
-$ cp -r ../../Template/* ./
+$ git clone https://github.com/NikolasMelui/multikey-modx-template.git
 $ ../../Gitify/Gitify modx:install
 ```
 Gitify будет спрашивать у вас информацию для установки (вся информация содержится в файле __docker-compose.yml__):
