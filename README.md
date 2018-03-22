@@ -22,9 +22,9 @@ Once everything is installed, go to the project files container (named *_php_1) 
 $ docker exec -it *_php_1 bash
 ```
 You have two important folders on second-level-up - __Gitify__ and __Template__.
-Use this commands to copy multikey-modx-template and install MODX Revo:
+Use this commands to clone reop with multikey-modx-template and install MODX Revo:
 ```
-$ cp -r ../../Template/* ./
+$ git clone https://github.com/NikolasMelui/multikey-modx-template.git
 $ cp ../../Gitify/Gitify modx:install
 ```
 Gitify will ask you for details to install (all details is in __docker-compose.yml__ file):
