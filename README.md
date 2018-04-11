@@ -11,17 +11,15 @@ You can think this is useless template with old technologies and MODX is bad and
 
 ## Installation
 
-Clone this repo to your local mashine and install all dependencies:
+Clone this repo on your local mashine and orchestrate all composition:
 ```
-$ git clone https://github.com/NikolasMelui/docker-multikey-modx-template.git
-$ cd docker-multikey-modx-template
 $ docker-compose up -d
 ```
-Once everything is installed, go to the project files container (named *_php_1) interactive mode with bash:
+Once everything is installed, use bash to enter the application container named ${projectname}_php_1:
 ```
-$ docker exec -it *_php_1 bash
+$ docker exec -it ${projectname}_php_1 bash
 ```
-Use this commands to clone multikey-modx-template and install MODX Revo:
+Now from application container use this commands to clone multikey-modx-template into it and install MODX:
 ```
 $ git clone https://github.com/NikolasMelui/multikey-modx-template.git
 $ cp ../../Gitify/Gitify modx:install
@@ -32,18 +30,18 @@ Gitify will ask you for details to install (all details is in __docker-compose.y
 * Database User [root]: __root__
 * Database Password: __r00t__
 * Database Prefix [modx_]:
-* Hostname [53e5ecdbb8f1]:
+* Hostname []:
 * Base URL [/]:
 * Manager Language [en]: __ru__
 * Manager User [tmp_admin]: __admin__
 * Manager User Password [generated]: __password__
 * Manager Email:
 
-Install all packages:
+You can try to install all packages... but it is not a great idea, because this function is unstable.
 ```
 $ ../../Gitify/Gitify package:install --all
 ```
-Now build the project installation:
+Now build the project from static files:
 ```
 $ ../../Gitify/Gitify build --force
 ```
