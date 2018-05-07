@@ -8,7 +8,7 @@ RUN docker-php-ext-install pdo_mysql
 
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
-RUN cd /var/www && git clone https://github.com/modmore/Gitify.git && cd Gitify && composer install
+RUN cd /var/www && git clone https://github.com/NikolasMelui/Gitify.git -b content-class_key-include && cd Gitify && composer install
 
 RUN { echo 'date.timezone=Europe/Moscow'; } > /usr/local/etc/php/conf.d/datetime.ini
 
