@@ -1,12 +1,12 @@
 version: '2'
 services:
   db:
-    image: mysql
+    image: mysql:5.6
     restart: always
     volumes:
-      - data:/var/lib/mysql:rw
+      - data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: r00t
+      MYSQL_ROOT_PASSWORD:  password
       MYSQL_DATABASE: modx
     ports:
       - 33060:3306
@@ -16,15 +16,17 @@ services:
     restart: always
     ports:
       - 3333:80
+    volumes:
+      - ./src/nginx:/etc/nginx/conf.d
     volumes_from:
       - php
   php:
-    build: ./modx/
+    build: ./docker/php/
     restart: always
     ports:
       - 8081:8081
     volumes:
-      - ./src:/var/www/html/public
+      - ./src/php:/var/www/html/public
     depends_on:
       - db
     links:
