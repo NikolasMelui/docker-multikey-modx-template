@@ -13,6 +13,8 @@ You can think this is useless template with old technologies and MODX is bad and
 
 Clone this repo on your local mashine and orchestrate all composition:
 ```
+$ git clone https://github.com/NikolasMelui/docker-multikey-modx-template.git
+$ cd docker-multikey-modx-template
 $ docker-compose up -d
 ```
 Once everything is installed, use bash to enter the application container named ${projectname}_php_1:
