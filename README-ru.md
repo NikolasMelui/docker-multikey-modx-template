@@ -30,7 +30,7 @@ Gitify будет спрашивать у вас информацию для у�
 * Database Host [localhost]: __db__
 * Database Name [dockermultikeymodxtemplate]: __modx__
 * Database User [root]: __root__
-* Database Password: __r00t__
+* Database Password: __password__
 * Database Prefix [modx_]:
 * Hostname [53e5ecdbb8f1]:
 * Base URL [/]:
