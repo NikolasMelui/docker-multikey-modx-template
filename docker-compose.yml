@@ -1,26 +1,28 @@
 version: '2'
 services:
   db:
-    image: mysql
-    restart: always
+    image: mysql:5.6
+    restart: unless-stopped
     volumes:
-      - data:/var/lib/mysql:rw
+      - data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: r00t
+      MYSQL_ROOT_PASSWORD:  password
       MYSQL_DATABASE: modx
     ports:
       - 33060:3306
     command: mysqld --sql-mode=NO_ENGINE_SUBSTITUTION --character-set-server=utf8 --collation-server=utf8_general_ci
   nginx:
     image: alroniks/nginx:latest
-    restart: always
+    restart: unless-stopped
     ports:
       - 3333:80
+    volumes:
+      - ./configs/nginx:/etc/nginx/conf.d
     volumes_from:
       - php
   php:
-    build: ./modx/
-    restart: always
+    build: ./dockerfiles/php/
+    restart: unless-stopped
     ports:
       - 8081:8081
     volumes:
