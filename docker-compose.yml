@@ -17,11 +17,11 @@ services:
     ports:
       - 3333:80
     volumes:
-      - ./configs/nginx:/etc/nginx/conf.d
+      - ./config/nginx:/etc/nginx/conf.d
     volumes_from:
       - php
   php:
-    build: ./dockerfiles/php/
+    build: ./docker/php/
     restart: unless-stopped
     ports:
       - 8081:8081
