@@ -13,6 +13,8 @@ You can think this is useless template with old technologies and MODX is bad and
 
 Clone this repo on your local mashine and orchestrate all composition:
 ```
+$ git clone https://github.com/NikolasMelui/docker-multikey-modx-template.git
+$ cd docker-multikey-modx-template
 $ docker-compose up -d
 ```
 Once everything is installed, use bash to enter the application container named ${projectname}_php_1:
@@ -28,7 +30,7 @@ Gitify will ask you for details to install (all details is in __docker-compose.y
 * Database Host [localhost]: __db__
 * Database Name [dockermultikeymodxtemplate]: __modx__
 * Database User [root]: __root__
-* Database Password: __r00t__
+* Database Password: __password__
 * Database Prefix [modx_]:
 * Hostname []:
 * Base URL [/]:

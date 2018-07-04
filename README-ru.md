@@ -23,14 +23,14 @@ $ docker exec -it *_php_1 bash
 ```
 Используйте следующие команды, чтобы склонировать репозиторий с multikey-modx-template и установить MODX Revo:
 ```
-$ git clone https://github.com/NikolasMelui/multikey-modx-template.git
+$ git clone https://github.com/NikolasMelui/multikey-modx-template.git ./
 $ ../../Gitify/Gitify modx:install
 ```
 Gitify будет спрашивать у вас информацию для установки (вся информация содержится в файле __docker-compose.yml__):
 * Database Host [localhost]: __db__
 * Database Name [dockermultikeymodxtemplate]: __modx__
 * Database User [root]: __root__
-* Database Password: __r00t__
+* Database Password: __password__
 * Database Prefix [modx_]:
 * Hostname [53e5ecdbb8f1]:
 * Base URL [/]:
