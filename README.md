@@ -24,7 +24,7 @@ $ docker exec -it ${projectname}_php_1 bash
 Now from application container use this commands to clone multikey-modx-template into it and install MODX:
 ```
 $ git clone https://github.com/NikolasMelui/multikey-modx-template.git
-$ cp ../../Gitify/Gitify modx:install
+$ ../../Gitify/Gitify modx:install
 ```
 Gitify will ask you for details to install (all details is in __docker-compose.yml__ file):
 * Database Host [localhost]: __db__
