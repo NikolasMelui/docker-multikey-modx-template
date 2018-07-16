@@ -23,8 +23,6 @@ services:
   php:
     build: ./docker/php/
     restart: unless-stopped
-    ports:
-      - 8081:8081
     volumes:
       - ./src:/var/www/html/public
     depends_on:
