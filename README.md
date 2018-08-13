@@ -1,29 +1,32 @@
 Docker Multikey Modx Template
 ======
 ##### [Russian][russian-docs]
-Docker Multikey Modx Template, powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [Multikey Studio][multikey-studio], is a powerfull orchestration platform of docker and docker-compose files includes nginx, mysql, php, gitify and modx-multikey-template.
+Docker Multikey Modx Template, powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [Multikey Studio][multikey-studio], is a powerfull orchestration platform of docker and docker-compose files includes nginx, mysql, php, gitify and multikey-modx-template.
 
 # Important!
-You need to install [Docker][docker] and [Docker-compose][docker-compose] first.
+- You need to install [Docker][docker] and [Docker-compose][docker-compose] first.
+- **${projectname}** - your projectname
+___
 
 You can think this is useless template with old technologies and MODX is bad and dead. Ok.
 > Go and fu** yourself. J. Stat.
 
 ## Installation
 
-Clone this repo on your local mashine and orchestrate all composition:
-```
-$ git clone https://github.com/NikolasMelui/docker-multikey-modx-template.git
-$ cd docker-multikey-modx-template
+Create a new directory on your local mashine, cd into it, clone this repo and then orchestrate the composition (install all dependencies):
+```bash
+$ mkdir ${projectname} && cd ${projectname}
+$ git clone https://github.com/NikolasMelui/docker-multikey-modx-template.git ./
 $ docker-compose up -d
 ```
+
 Once everything is installed, use bash to enter the application container named ${projectname}_php_1:
-```
+```bash
 $ docker exec -it ${projectname}_php_1 bash
 ```
 Now from application container use this commands to clone multikey-modx-template into it and install MODX:
-```
-$ git clone https://github.com/NikolasMelui/multikey-modx-template.git
+```bash
+$ git clone https://github.com/NikolasMelui/multikey-modx-template.git ./
 $ ../../Gitify/Gitify modx:install
 ```
 Gitify will ask you for details to install (all details is in __docker-compose.yml__ file):
@@ -40,15 +43,15 @@ Gitify will ask you for details to install (all details is in __docker-compose.y
 * Manager Email:
 
 You can try to install all packages... but it is not a great idea, because this function is unstable.
-```
+```bash
 $ ../../Gitify/Gitify package:install --all
 ```
 Now build the project from static files:
-```
+```bash
 $ ../../Gitify/Gitify build --force
 ```
 Use this sh script to add necessary rules for files and folders:
-```
+```bash
 $ sh rules.sh
 ```
 And now you have a complete template.
@@ -56,13 +59,13 @@ And now you have a complete template.
 ### Quick Start
 
 Use npm to install frontend dependencies and run browserSync and watchers to realy 'reactive' development:
-```
+```bash
 $ npm i
 $ npm run dev
 ```
 
 ... and this command if needed to create a minified frontend files:
-```
+```bash
 $ npm run prod
 ```
 ##### Know more about pure [multikey-modx-template][multikey-modx-template].
