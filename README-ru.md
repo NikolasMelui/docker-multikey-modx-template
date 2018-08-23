@@ -72,17 +72,18 @@ $ npm run prod
 Хотите стать разработчиком этого проекта? Супер!
 Это opensource проект. Все контрибуции приветствуются. Форкайте проект себе и вперёд!
 
-| Планы | Статус |
-| ------ | ------ |
-| es6 | - |
-| Patterns | - |
-| Webpack | - |
-| ESLint | - |
-| Mocha | - |
-| CI\CD | - |
-| SFTP\rsync | - |
-| Docker | https://github.com/NikolasMelui/docker-multikey-modx-template |
-| Kubernates | - |
+| Планы      | Статус                                                        |
+| ---------- | ------------------------------------------------------------- |
+| es6        | -                                                             |
+| Patterns   | -                                                             |
+| Webpack    | -                                                             |
+| ESLint     | env                                                           |
+| Mocha      | -                                                             |
+| CI\CD      | -                                                             |
+| SFTP\rsync | -                                                             |
+| Docker     | https://github.com/NikolasMelui/docker-multikey-modx-template |
+| Kubernates | -                                                             |
+
 ___
 Лицензия
 ----
